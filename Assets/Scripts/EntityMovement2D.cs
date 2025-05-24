@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class EntityMovement2D : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -14,6 +15,7 @@ public class EntityMovement2D : MonoBehaviour
     // Components
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     // Movement state
     private Vector2 moveInput;
@@ -25,6 +27,7 @@ public class EntityMovement2D : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -44,8 +47,7 @@ public class EntityMovement2D : MonoBehaviour
         if (isDashing)
         {
             // Durante el dash, mantener la velocidad máxima en la dirección actual
-            Vector2 dashVelocity = moveInput.normalized * dashSpeed;
-            rb.linearVelocity = dashVelocity;
+            rb.linearVelocity = new Vector2(moveInput.x * dashSpeed, rb.linearVelocity.y);
             
             // Reducir el tiempo de dash
             dashTimeLeft -= Time.fixedDeltaTime;
@@ -58,8 +60,7 @@ public class EntityMovement2D : MonoBehaviour
         else
         {
             // Movimiento normal
-            Vector2 velocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-            rb.linearVelocity = velocity;
+            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
 
             // Reducir el cooldown del dash
             if (dashCooldownLeft > 0)
@@ -67,6 +68,10 @@ public class EntityMovement2D : MonoBehaviour
                 dashCooldownLeft -= Time.fixedDeltaTime;
             }
         }
+
+        // Actualizar la animación basada en el movimiento horizontal
+        float horizontalValue = Mathf.Abs(moveInput.x);
+        animator.SetFloat("Horizontal", horizontalValue);
     }
 
     private void UpdateSpriteDirection()
@@ -81,6 +86,12 @@ public class EntityMovement2D : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        
+        // Voltear el sprite basado en la dirección del movimiento
+        if (moveInput.x != 0)
+        {
+            spriteRenderer.flipX = moveInput.x < 0;
+        }
     }
 
     public void OnJump(InputValue value)
