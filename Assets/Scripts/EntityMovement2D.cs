@@ -15,6 +15,12 @@ public class EntityMovement2D : MonoBehaviour
     [SerializeField] float groundRadius = 0.2f;
     [SerializeField] LayerMask groundLayer;
 
+    [Header("Dash")]
+    [SerializeField] float dashForce = 18f;
+    [SerializeField] float dashDuration = 0.18f;
+    [SerializeField] float dashCooldown = 0.7f;
+    [SerializeField] TrailRenderer dashTrail;
+
     /* ─── Runtime ─── */
     Rigidbody2D rb;
     SpriteRenderer sr;
@@ -26,12 +32,19 @@ public class EntityMovement2D : MonoBehaviour
     /* Bloqueo (lo usa Combat2D y la IA) */
     public bool IsBlocking { get; private set; }
 
+    bool isDashing = false;
+    float dashTimer = 0f;
+    float nextDashTime = 0f;
+    Collider2D col;
+
     /* ------------------------ */
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
+        if (dashTrail) dashTrail.emitting = false;
     }
 
     void Update()
@@ -39,11 +52,13 @@ public class EntityMovement2D : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         UpdateSpriteDirection();
         UpdateAnimator();
+        HandleDash();
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        if (!isDashing)
+            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
     }
 
     /* Helpers */
@@ -61,6 +76,18 @@ public class EntityMovement2D : MonoBehaviour
         anim.SetFloat("YVelocity", rb.linearVelocity.y);
     }
 
+    void HandleDash()
+    {
+        if (isDashing)
+        {
+            dashTimer += Time.deltaTime;
+            if (dashTimer >= dashDuration)
+            {
+                EndDash();
+            }
+        }
+    }
+
     /* ------------- Input callbacks ------------- */
     public void OnMove(InputValue v) => moveInput = v.Get<Vector2>();
 
@@ -75,8 +102,53 @@ public class EntityMovement2D : MonoBehaviour
 
     public void OnBlock(InputValue v) => IsBlocking = v.isPressed;
 
+    public void OnDash(InputValue v)
+    {
+        if (v.isPressed && !isDashing && Time.time >= nextDashTime && !IsBlocking)
+        {
+            StartDash();
+        }
+    }
+
+    void StartDash()
+    {
+        isDashing = true;
+        dashTimer = 0f;
+        nextDashTime = Time.time + dashCooldown;
+        anim.SetTrigger("Dash");
+        if (dashTrail) dashTrail.emitting = true;
+        if (col) col.enabled = false; // Permite atravesar enemigos
+        // Aplica impulso en la dirección actual
+        float dir = sr.flipX ? -1f : 1f;
+        rb.linearVelocity = new Vector2(dir * dashForce, 0f);
+    }
+
+    void EndDash()
+    {
+        isDashing = false;
+        if (dashTrail) dashTrail.emitting = false;
+        if (col) col.enabled = true;
+        // Opcional: detener el impulso horizontal al terminar el dash
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+    }
+
     /* ----- API que puede usar la IA ------ */
     public void SetMoveInput(Vector2 input) { moveInput = input; UpdateSpriteDirection(); }
     public void TryJump() { if (isGrounded) rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); }
     public void SetBlocking(bool state) => IsBlocking = state;
+
+    // Método público para dash de IA
+    public void DashAI(int direction)
+    {
+        if (!isDashing && Time.time >= nextDashTime && !IsBlocking)
+        {
+            isDashing = true;
+            dashTimer = 0f;
+            nextDashTime = Time.time + dashCooldown;
+            anim.SetTrigger("Dash");
+            if (dashTrail) dashTrail.emitting = true;
+            if (col) col.enabled = false;
+            rb.linearVelocity = new Vector2(direction * dashForce, 0f);
+        }
+    }
 }

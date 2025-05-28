@@ -4,9 +4,13 @@ using UnityEngine;
 public class Combat2D : MonoBehaviour
 {
     [Header("Attack")]
-    [SerializeField] float attackDamage = 25f;         // Daño base recomendado
+    [SerializeField] float minDamage = 8f; // Daño mínimo
+    [SerializeField] float maxDamage = 10f; // Daño máximo
+    [SerializeField] float criticalChance = 0.08f; 
+    [SerializeField] float criticalMultiplier = 1.5f; // Daño crítico x2
     [SerializeField] float attackRate = 1.0f;          // Tiempo entre ataques (cooldown)
     [SerializeField] Transform hitPoint;
+    [SerializeField] float hitOffset = 0.7f; // Nuevo: offset configurable para el ataque
     [SerializeField] float hitRadius = 0.7f;           // Radio de golpe ligeramente mayor
     [SerializeField] LayerMask enemyMask;
 
@@ -43,20 +47,31 @@ public class Combat2D : MonoBehaviour
         nextAttackTime = Time.time + attackRate;
         anim.SetTrigger("Attack");
 
-        // Aquí se puede reproducir un sonido de ataque en el futuro
-        // if (audioSource && attackSound) audioSource.PlayOneShot(attackSound);
+        // Determinar dirección y origen del ataque (como ya tienes)
+        var sr = GetComponent<SpriteRenderer>();
+        float dir = (sr != null && sr.flipX) ? -1f : 1f;
+        Vector2 attackOrigin = hitPoint ? (Vector2)hitPoint.position : (Vector2)transform.position + Vector2.right * dir * hitOffset;
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(hitPoint.position, hitRadius, enemyMask);
-        foreach (var h in hits)
+        // Calcular daño base aleatorio
+        float damage = Random.Range(minDamage, maxDamage);
+
+        // ¿Es crítico?
+        bool isCritical = Random.value < criticalChance;
+        if (isCritical)
         {
-            if (h.TryGetComponent<Health>(out var hp))
+            damage *= criticalMultiplier;
+            // Aquí puedes agregar feedback visual/sonoro de crítico
+        }
+
+        // Detectar enemigos y aplicar daño
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackOrigin, hitRadius, enemyMask);
+        foreach (var hit in hits)
+        {
+            var health = hit.GetComponent<Health>();
+            if (health != null)
             {
-                bool killed = hp.TakeDamage(attackDamage);
-                // Aquí se puede reproducir un sonido o efecto de impacto en el futuro
-                // if (audioSource && hitSound) audioSource.PlayOneShot(hitSound);
-                // if (hitEffect) Instantiate(hitEffect, h.transform.position, Quaternion.identity);
-                /* Score sólo si somos el Player */
-                if (CompareTag("Player")) ScoreManager.Add(10);
+                health.TakeDamage(damage);
+                // Puedes pasar isCritical si quieres efectos especiales
             }
         }
     }
@@ -76,8 +91,10 @@ public class Combat2D : MonoBehaviour
     /* Gizmo para ver el área de golpe */
     void OnDrawGizmosSelected()
     {
-        if (hitPoint == null) return;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(hitPoint.position, hitRadius);
+        var sr = GetComponent<SpriteRenderer>();
+        float dir = (sr != null && sr.flipX) ? -1f : 1f;
+        Vector2 attackOrigin = hitPoint ? (Vector2)hitPoint.position : (Vector2)transform.position + new Vector2(dir * hitOffset, 0);
+        Gizmos.DrawWireSphere(attackOrigin, hitRadius);
     }
 }

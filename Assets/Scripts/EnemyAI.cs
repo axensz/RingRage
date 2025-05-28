@@ -21,6 +21,12 @@ public class EnemyAI : MonoBehaviour
     [Header("Stun")]
     [SerializeField] float stunDuration = 0.8f;
 
+    [Header("Dash IA")]
+    [SerializeField] float dashHealthThreshold = 30f; // Vida baja para dash defensivo
+    [SerializeField] float dashDistanceMin = 1.5f;   // Distancia mínima para dash
+    [SerializeField] float dashCooldownAI = 2.0f;    // Cooldown entre dashes IA
+    float nextAIDashTime = 0f;
+
     // [Header("Sonido")]
     // [SerializeField] AudioClip attackSound;
     // [SerializeField] AudioClip tellSound;
@@ -52,7 +58,19 @@ public class EnemyAI : MonoBehaviour
     {
         if (isDead || target == null) return;
 
-        float dist = Mathf.Abs(target.position.x - transform.position.x);
+        Vector2 toTarget = target.position - transform.position;
+        float dist = toTarget.magnitude;
+        float dx = toTarget.x;
+        float dy = toTarget.y;
+
+        // Dash defensivo si la vida es baja y el jugador está cerca
+        var health = GetComponent<Health>();
+        if (health != null && health.CurrentHP < dashHealthThreshold && dist < dashDistanceMin && Time.time >= nextAIDashTime)
+        {
+            int dashDir = dx > 0 ? -1 : 1; // Dash en dirección opuesta al player
+            movement.DashAI(dashDir);
+            nextAIDashTime = Time.time + dashCooldownAI;
+        }
 
         // Bloqueo aleatorio
         if (blockTimer > 0)
@@ -81,8 +99,8 @@ public class EnemyAI : MonoBehaviour
                 }
                 else if (dist > attackRange)
                 {
-                    float dir = Mathf.Sign(target.position.x - transform.position.x);
-                    movement.SetMoveInput(new Vector2(dir, 0));
+                    float dirX = Mathf.Sign(dx);
+                    movement.SetMoveInput(new Vector2(dirX, 0));
                 }
                 else
                 {

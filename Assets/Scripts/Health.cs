@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public DeathEvent OnDeath;
 
     [SerializeField] private float currentHP;
+    public float CurrentHP => currentHP;
     Animator anim;
     EntityMovement2D move;
 
