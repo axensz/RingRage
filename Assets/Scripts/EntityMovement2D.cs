@@ -37,6 +37,8 @@ public class EntityMovement2D : MonoBehaviour
     float nextDashTime = 0f;
     Collider2D col;
 
+    public SpriteRenderer SpriteRenderer { get; private set; }
+
     /* ------------------------ */
     void Awake()
     {
@@ -44,6 +46,7 @@ public class EntityMovement2D : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
+        SpriteRenderer = sr;
         if (dashTrail) dashTrail.emitting = false;
     }
 

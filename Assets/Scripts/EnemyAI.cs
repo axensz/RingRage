@@ -27,6 +27,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float dashCooldownAI = 2.0f;    // Cooldown entre dashes IA
     float nextAIDashTime = 0f;
 
+    [Header("Reacción IA")]
+    [SerializeField] float turnReactionDelay = 0.15f; // Retardo para girar tras dash del jugador
+    float turnTimer = 0f;
+
     // [Header("Sonido")]
     // [SerializeField] AudioClip attackSound;
     // [SerializeField] AudioClip tellSound;
@@ -63,6 +67,25 @@ public class EnemyAI : MonoBehaviour
         float dx = toTarget.x;
         float dy = toTarget.y;
 
+        // --- Orientación natural con retardo ---
+        bool shouldFlip = (dx < 0 && !movement.SpriteRenderer.flipX) || (dx > 0 && movement.SpriteRenderer.flipX);
+        if (shouldFlip)
+        {
+            turnTimer += Time.deltaTime;
+            if (turnTimer >= turnReactionDelay)
+            {
+                movement.SpriteRenderer.flipX = dx < 0;
+                turnTimer = 0f;
+            }
+        }
+        else
+        {
+            turnTimer = 0f;
+        }
+
+        // --- Lógica de ataque y persecución ---
+        bool playerInFront = (dx > 0 && !movement.SpriteRenderer.flipX) || (dx < 0 && movement.SpriteRenderer.flipX);
+
         // Dash defensivo si la vida es baja y el jugador está cerca
         var health = GetComponent<Health>();
         if (health != null && health.CurrentHP < dashHealthThreshold && dist < dashDistanceMin && Time.time >= nextAIDashTime)
@@ -87,26 +110,19 @@ public class EnemyAI : MonoBehaviour
         {
             case State.Idle:
                 movement.SetMoveInput(Vector2.zero);
-                if (dist <= detectRange)
+                if (dist < detectRange)
                     currentState = State.Chase;
                 break;
 
             case State.Chase:
-                if (dist > detectRange)
+                if (dist < attackRange && playerInFront)
                 {
                     movement.SetMoveInput(Vector2.zero);
-                    currentState = State.Idle;
-                }
-                else if (dist > attackRange)
-                {
-                    float dirX = Mathf.Sign(dx);
-                    movement.SetMoveInput(new Vector2(dirX, 0));
+                    currentState = State.Tell;
                 }
                 else
                 {
-                    movement.SetMoveInput(Vector2.zero);
-                    stateTimer = 0;
-                    currentState = State.Tell;
+                    movement.SetMoveInput(new Vector2(Mathf.Sign(dx), 0));
                 }
                 break;
 
