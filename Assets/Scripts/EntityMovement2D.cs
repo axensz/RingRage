@@ -6,101 +6,77 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Animator))]
 public class EntityMovement2D : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float dashSpeed = 20f;
-    [SerializeField] private float dashDuration = 0.2f;
-    [SerializeField] private float dashCooldown = 1f;
+    [Header("Movement")]
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpForce = 12f;
 
-    // Components
-    private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    [Header("Ground Check")]
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundRadius = 0.2f;
+    [SerializeField] LayerMask groundLayer;
 
-    // Movement state
-    private Vector2 moveInput;
-    private bool isDashing;
-    private float dashTimeLeft;
-    private float dashCooldownLeft;
+    /* ─── Runtime ─── */
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+    Animator anim;
 
-    private void Awake()
+    Vector2 moveInput;
+    public bool isGrounded;
+
+    /* Bloqueo (lo usa Combat2D y la IA) */
+    public bool IsBlocking { get; private set; }
+
+    /* ------------------------ */
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
-        // Update sprite direction
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         UpdateSpriteDirection();
+        UpdateAnimator();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        // Apply movement
-        Move();
+        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void Move()
-    {
-        if (isDashing)
-        {
-            // Durante el dash, mantener la velocidad máxima en la dirección actual
-            rb.linearVelocity = new Vector2(moveInput.x * dashSpeed, rb.linearVelocity.y);
-            
-            // Reducir el tiempo de dash
-            dashTimeLeft -= Time.fixedDeltaTime;
-            if (dashTimeLeft <= 0)
-            {
-                isDashing = false;
-                dashCooldownLeft = dashCooldown;
-            }
-        }
-        else
-        {
-            // Movimiento normal
-            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-
-            // Reducir el cooldown del dash
-            if (dashCooldownLeft > 0)
-            {
-                dashCooldownLeft -= Time.fixedDeltaTime;
-            }
-        }
-
-        // Actualizar la animación basada en el movimiento horizontal
-        float horizontalValue = Mathf.Abs(moveInput.x);
-        animator.SetFloat("Horizontal", horizontalValue);
-    }
-
-    private void UpdateSpriteDirection()
+    /* Helpers */
+    void UpdateSpriteDirection()
     {
         if (moveInput.x != 0)
+            sr.flipX = moveInput.x < 0;
+    }
+
+    void UpdateAnimator()
+    {
+        anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
+        anim.SetBool("Grounded", isGrounded);
+        anim.SetBool("Blocking", IsBlocking);
+        anim.SetFloat("YVelocity", rb.linearVelocity.y);
+    }
+
+    /* ------------- Input callbacks ------------- */
+    public void OnMove(InputValue v) => moveInput = v.Get<Vector2>();
+
+    public void OnJump(InputValue v)
+    {
+        if (v.isPressed && isGrounded && !IsBlocking)
         {
-            spriteRenderer.flipX = moveInput.x < 0;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            anim.SetTrigger("Jump");
         }
     }
 
-    // New Input System callbacks
-    public void OnMove(InputValue value)
-    {
-        moveInput = value.Get<Vector2>();
-        
-        // Voltear el sprite basado en la dirección del movimiento
-        if (moveInput.x != 0)
-        {
-            spriteRenderer.flipX = moveInput.x < 0;
-        }
-    }
+    public void OnBlock(InputValue v) => IsBlocking = v.isPressed;
 
-    public void OnJump(InputValue value)
-    {
-        if (value.isPressed && !isDashing && dashCooldownLeft <= 0)
-        {
-            // Iniciar el dash
-            isDashing = true;
-            dashTimeLeft = dashDuration;
-        }
-    }
+    /* ----- API que puede usar la IA ------ */
+    public void SetMoveInput(Vector2 input) { moveInput = input; UpdateSpriteDirection(); }
+    public void TryJump() { if (isGrounded) rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); }
+    public void SetBlocking(bool state) => IsBlocking = state;
 }

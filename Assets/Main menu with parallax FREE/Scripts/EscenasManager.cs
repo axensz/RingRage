@@ -27,4 +27,9 @@ public class EscenasManager : MonoBehaviour
         panelCreditos.SetActive(false);
         panelMenu.SetActive(true);
     }
+
+    public void GameToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

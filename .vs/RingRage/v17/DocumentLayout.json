@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|c:\\users\\yeyey\\documents\\github\\ringrage\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\main menu with parallax free\\scripts\\escenasmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\main menu with parallax free\\scripts\\escenasmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\scripts\\entitymovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entitymovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|c:\\users\\yeyey\\documents\\github\\ringrage\\assets\\scripts\\combat2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|c:\\users\\yeyey\\documents\\github\\ringrage\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\main menu with parallax free\\scripts\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\main menu with parallax free\\scripts\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\main menu with parallax free\\scripts\\parallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\main menu with parallax free\\scripts\\parallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\assets\\main menu with parallax free\\scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EC57697-4353-DCE0-84FC-BBCD994CDD9B}|Assembly-CSharp.csproj|solutionrelative:assets\\main menu with parallax free\\scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreManager.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\ScoreManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScoreManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T07:12:52.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Combat2D.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\Combat2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat2D.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\Combat2D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat2D.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T07:11:40.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwB8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T07:10:37.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EntityMovement2D.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\EntityMovement2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EntityMovement2D.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\EntityMovement2D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EntityMovement2D.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:15:47.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyAI.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\EnemyAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyAI.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Scripts\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyAI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:28:52.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EscenasManager.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\EscenasManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Main menu with parallax FREE\\Scripts\\EscenasManager.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\EscenasManager.cs",
+              "RelativeToolTip": "Assets\\Main menu with parallax FREE\\Scripts\\EscenasManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T05:44:06.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsController.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\SettingsController.cs",
+              "RelativeDocumentMoniker": "Assets\\Main menu with parallax FREE\\Scripts\\SettingsController.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\SettingsController.cs",
+              "RelativeToolTip": "Assets\\Main menu with parallax FREE\\Scripts\\SettingsController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAABQwEsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T05:08:51.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\MenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Main menu with parallax FREE\\Scripts\\MenuController.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\MenuController.cs",
+              "RelativeToolTip": "Assets\\Main menu with parallax FREE\\Scripts\\MenuController.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAgwIIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T05:00:43.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Parallax.cs",
+              "DocumentMoniker": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\Parallax.cs",
+              "RelativeDocumentMoniker": "Assets\\Main menu with parallax FREE\\Scripts\\Parallax.cs",
+              "ToolTip": "C:\\Users\\yeyey\\Documents\\GitHub\\RingRage\\Assets\\Main menu with parallax FREE\\Scripts\\Parallax.cs",
+              "RelativeToolTip": "Assets\\Main menu with parallax FREE\\Scripts\\Parallax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVDhP7Y\u002B9asJgGIWfRD6LEPACCgWhQeykEKSjY8gFxD8QHMS1t\u002BFgcXFz6FakSG/AG9BOksUM0qHtUhqKkEmQ16H1Q6Q0uPtMB87hvOeFM5rF20JaTy0pDApi39tSH9dl70XrSPKDvBxrAAMgeA\u002BkNqlRvizTLrbJXmRZfi2plqpGtI7EGTn7vCadShPehQYAneeOeA\u002BexHGsmw/5b4EJMP\u002BY4167WJb103gCJoAyFcpUxx78XnRGDpvthlw/p/XhCprjpviP/p/zSXjBAJi9zqQxaeDaLv6Nj0opgs\u002BA7m038SUdmIZTGb4MWX2vyKgMlasKPa\u002BXWHAGdt/Acu2QGdhLAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-05-28T04:59:50.93Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
