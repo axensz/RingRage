@@ -25,12 +25,16 @@ public class Health : MonoBehaviour
 
     public bool TakeDamage(float dmg)
     {
-        /* Si estamos bloqueando, reducimos o anulamos da�o */
+        /* Si estamos bloqueando, reducimos o anulamos daño */
         if (move != null && move.IsBlocking) dmg *= 0.3f;
 
         currentHP -= dmg;
         currentVida.text = $"Health:{currentHP}";
-        anim.SetTrigger("Hit");
+        // Llama a la animación de daño a través de Combat2D (mejor manejo de triggers y cooldown)
+        var combat = GetComponent<Combat2D>();
+        if (combat != null) combat.OnHit();
+        // Si no hay Combat2D, fallback a animación directa
+        else if (anim != null) anim.SetTrigger("Hit");
 
         if (currentHP <= 0) Die();
         return currentHP <= 0;
