@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] TMP_Text currentVida;
 
     [SerializeField] float maxHP = 100f;
+    public float MaxHP => maxHP; // Make maxHP readable publicly
     public DeathEvent OnDeath;
 
     [SerializeField] private float currentHP;
@@ -30,7 +31,13 @@ public class Health : MonoBehaviour
         if (move != null && move.IsBlocking) dmg *= 0.3f;
 
         currentHP -= dmg;
-        currentVida.text = $"Health:{currentHP}";
+
+        // Solo actualiza el texto si currentVida está asignado
+        if (currentVida != null) 
+        {
+            currentVida.text = $"Health:{currentHP}";
+        }
+
         // Llama a la animación de daño a través de Combat2D (mejor manejo de triggers y cooldown)
         var combat = GetComponent<Combat2D>();
         if (combat != null) combat.OnHit();

@@ -21,6 +21,10 @@ public class EntityMovement2D : MonoBehaviour
     [SerializeField] float dashCooldown = 0.7f;
     [SerializeField] TrailRenderer dashTrail;
 
+    [Header("Stamina")]
+    public float maxStamina = 100f; // Para que StaminaBar.cs pueda leerlo
+    [HideInInspector] public float currentStamina; // Para que StaminaBar.cs pueda leerlo, oculto del inspector
+
     /* ─── Runtime ─── */
     Rigidbody2D rb;
     SpriteRenderer sr;
@@ -34,7 +38,7 @@ public class EntityMovement2D : MonoBehaviour
 
     bool isDashing = false;
     float dashTimer = 0f;
-    float nextDashTime = 0f;
+    float nextDashTime = 0f; // Este es el tiempo cuando el dash estará disponible de nuevo (fin del cooldown)
     Collider2D col;
 
     public SpriteRenderer SpriteRenderer { get; private set; }
@@ -48,6 +52,7 @@ public class EntityMovement2D : MonoBehaviour
         col = GetComponent<Collider2D>();
         SpriteRenderer = sr;
         if (dashTrail) dashTrail.emitting = false;
+        currentStamina = maxStamina; // Iniciar con stamina llena
     }
 
     void Update()
@@ -56,6 +61,7 @@ public class EntityMovement2D : MonoBehaviour
         UpdateSpriteDirection();
         UpdateAnimator();
         HandleDash();
+        RegenerateStamina(); // Añadir regeneración de stamina
     }
 
     void FixedUpdate()
@@ -77,6 +83,8 @@ public class EntityMovement2D : MonoBehaviour
         anim.SetBool("Grounded", isGrounded);
         anim.SetBool("Blocking", IsBlocking);
         anim.SetFloat("YVelocity", rb.linearVelocity.y);
+        // Podrías añadir un parámetro al animator para la stamina si quieres animaciones basadas en ella
+        // anim.SetFloat("Stamina", currentStamina / maxStamina);
     }
 
     void HandleDash()
@@ -107,7 +115,9 @@ public class EntityMovement2D : MonoBehaviour
 
     public void OnDash(InputValue v)
     {
-        if (v.isPressed && !isDashing && Time.time >= nextDashTime && !IsBlocking)
+        // Ahora también verificamos si tenemos suficiente stamina (prácticamente llena)
+        // y si el cooldown ha pasado (Time.time >= nextDashTime)
+        if (v.isPressed && !isDashing && Time.time >= nextDashTime && !IsBlocking && currentStamina >= maxStamina * 0.99f) // Usamos 99% para evitar problemas de flotantes
         {
             StartDash();
         }
@@ -117,7 +127,9 @@ public class EntityMovement2D : MonoBehaviour
     {
         isDashing = true;
         dashTimer = 0f;
-        nextDashTime = Time.time + dashCooldown;
+        nextDashTime = Time.time + dashCooldown; // Marcar cuándo termina el cooldown
+        currentStamina = 0f; // Consumir toda la stamina
+
         anim.SetTrigger("Dash");
         if (dashTrail) dashTrail.emitting = true;
         if (col) col.enabled = false; // Permite atravesar enemigos
@@ -143,15 +155,47 @@ public class EntityMovement2D : MonoBehaviour
     // Método público para dash de IA
     public void DashAI(int direction)
     {
-        if (!isDashing && Time.time >= nextDashTime && !IsBlocking)
+        // La IA también necesita stamina y respetar el cooldown
+        if (!isDashing && Time.time >= nextDashTime && !IsBlocking && currentStamina >= maxStamina * 0.99f)
         {
             isDashing = true;
             dashTimer = 0f;
-            nextDashTime = Time.time + dashCooldown;
+            nextDashTime = Time.time + dashCooldown; // Marcar cuándo termina el cooldown
+            currentStamina = 0f; // Consumir toda la stamina
+
             anim.SetTrigger("Dash");
             if (dashTrail) dashTrail.emitting = true;
             if (col) col.enabled = false;
             rb.linearVelocity = new Vector2(direction * dashForce, 0f);
+        }
+    }
+
+    void RegenerateStamina()
+    {
+        if (currentStamina < maxStamina)
+        {
+            // Si el dash está en cooldown (nextDashTime es un tiempo futuro)
+            if (Time.time < nextDashTime)
+            {
+                // Calculamos cuánto tiempo ha pasado desde que comenzó el cooldown del dash actual
+                float timeSinceDashCooldownStarted = Time.time - (nextDashTime - dashCooldown);
+                timeSinceDashCooldownStarted = Mathf.Max(0, timeSinceDashCooldownStarted); // Asegurar que no sea negativo
+
+                if (dashCooldown > 0)
+                {
+                    // Interpolar la stamina desde 0 hasta maxStamina durante la duración del cooldown
+                    currentStamina = (timeSinceDashCooldownStarted / dashCooldown) * maxStamina;
+                }
+                else // Si el cooldown es 0 (o negativo, aunque no debería), la stamina se llena instantáneamente
+                {
+                    currentStamina = maxStamina;
+                }
+                currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina); // Asegurar que no exceda los límites
+            }
+            else // El cooldown ha terminado
+            {
+                currentStamina = maxStamina; // Rellenar la stamina completamente
+            }
         }
     }
 }

@@ -42,7 +42,8 @@ public class SettingsController : MonoBehaviour {
 
     public void ResolutionChange()
     {
-        Screen.SetResolution(resolutions[resolutionDrop.value].width, resolutions[resolutionDrop.value].height, Screen.fullScreen, resolutions[resolutionDrop.value].refreshRate);
+        Resolution newResolution = resolutions[resolutionDrop.value];
+        Screen.SetResolution(newResolution.width, newResolution.height, Screen.fullScreenMode, newResolution.refreshRateRatio);
         gameSettings.resolutionIndex = resolutionDrop.value;
     }
 
