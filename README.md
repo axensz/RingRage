@@ -1,4 +1,4 @@
-# **RingRage - Juego de Boxeo**
+# **RingRage - Peleas Callejeras**
 
 **RingRage** es un juego de boxeo 1v1, donde los jugadores pueden elegir personajes, enfrentar desafíos en un torneo y mejorar su rendimiento a través de entrenamientos personalizados. El objetivo es escalar en los torneos y convertirse en el campeón supremo.
 
