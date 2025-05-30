@@ -109,6 +109,7 @@ public class EscenasManager : MonoBehaviour
 
     public void RetryGame()
     {
+        ScoreManager.ResetScore();
         var timer = UnityEngine.Object.FindFirstObjectByType<TimerUI>();
         if (timer != null) timer.ResetTimer();
         // Recarga la escena que está actualmente activa
@@ -127,12 +128,24 @@ public class EscenasManager : MonoBehaviour
             highScoresText.text = tabla;
     }
 
-    void Start()
+    void OnEnable()
     {
         if (secretImage != null) secretImage.SetActive(false);
         if (secretText != null)
         {
-            secretText.GetComponent<UnityEngine.UI.Button>()?.onClick.AddListener(OnSecretTextClick);
+            var btn = secretText.GetComponent<UnityEngine.UI.Button>();
+            if (btn != null)
+                btn.onClick.AddListener(OnSecretTextClick);
+        }
+    }
+
+    void OnDisable()
+    {
+        if (secretText != null)
+        {
+            var btn = secretText.GetComponent<UnityEngine.UI.Button>();
+            if (btn != null)
+                btn.onClick.RemoveListener(OnSecretTextClick);
         }
     }
 
@@ -141,11 +154,38 @@ public class EscenasManager : MonoBehaviour
         if (Time.time - lastClickTime > clickResetTime) secretClickCount = 0;
         lastClickTime = Time.time;
         secretClickCount++;
+        if (secretText != null)
+        {
+            // Feedback visual: cambia color si está cerca de activar el easter egg
+            if (secretClickCount == 4)
+                secretText.color = Color.yellow;
+            else
+                secretText.color = Color.white;
+        }
         if (secretClickCount >= 5)
         {
-            if (secretImage != null) secretImage.SetActive(true);
+            if (secretImage != null)
+            {
+                // Posición aleatoria en la vista de la cámara principal
+                Camera cam = Camera.main;
+                if (cam != null)
+                {
+                    Vector2 rndViewport = new Vector2(Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f));
+                    Vector3 worldPos = cam.ViewportToWorldPoint(new Vector3(rndViewport.x, rndViewport.y, cam.nearClipPlane + 5f));
+                    secretImage.transform.position = worldPos;
+                }
+                secretImage.SetActive(true);
+                // Permitir ocultar la imagen con un clic
+                var imgBtn = secretImage.GetComponent<UnityEngine.UI.Button>();
+                if (imgBtn != null)
+                {
+                    imgBtn.onClick.RemoveAllListeners();
+                    imgBtn.onClick.AddListener(() => secretImage.SetActive(false));
+                }
+            }
             if (audioSource != null && secretSound != null) audioSource.PlayOneShot(secretSound);
             secretClickCount = 0;
+            if (secretText != null) secretText.color = Color.white;
         }
     }
 }

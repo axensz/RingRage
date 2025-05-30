@@ -1,0 +1,1326 @@
+fileFormatVersion: 2
+guid: 6371671d3cc9a9745be75e51182d1988
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4418852002769089349
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_0
+  - first:
+      213: 1048540446176568292
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_1
+  - first:
+      213: -4882326645846489609
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_2
+  - first:
+      213: 5707745063542350426
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_3
+  - first:
+      213: 772677415571510945
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_4
+  - first:
+      213: 2049379872856363861
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_5
+  - first:
+      213: -1570824540524366284
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_6
+  - first:
+      213: 4415125753955061111
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_7
+  - first:
+      213: -7082344720068918168
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_8
+  - first:
+      213: -5316980551621608857
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_9
+  - first:
+      213: 7197308275057916214
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_10
+  - first:
+      213: -5067471247529969588
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_11
+  - first:
+      213: -1436690918431884714
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_12
+  - first:
+      213: -6970839610467377052
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_13
+  - first:
+      213: -8444030575404506412
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_14
+  - first:
+      213: 1596579711895938868
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_15
+  - first:
+      213: 3581928134194187758
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_16
+  - first:
+      213: -350512783975216838
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_17
+  - first:
+      213: 8830300200047580583
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_18
+  - first:
+      213: -6623598797661246378
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_19
+  - first:
+      213: 7375336077569387390
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_20
+  - first:
+      213: 3243470288735153334
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_21
+  - first:
+      213: 3434512764917457178
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_22
+  - first:
+      213: -297943890634643092
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_23
+  - first:
+      213: -4641724274976043953
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_24
+  - first:
+      213: -2571715536924921202
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_25
+  - first:
+      213: 7567147748027661758
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_26
+  - first:
+      213: 6609453910245365753
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_27
+  - first:
+      213: 8401020673444958481
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_28
+  - first:
+      213: -2419795112710040380
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_29
+  - first:
+      213: 7257630706003381919
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_30
+  - first:
+      213: 9209856190470668444
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_31
+  - first:
+      213: 9207223373748733994
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_32
+  - first:
+      213: 1160032667581618434
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_33
+  - first:
+      213: -4470904011296550783
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_34
+  - first:
+      213: -582180539676749196
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_35
+  - first:
+      213: 7492478212757919584
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_36
+  - first:
+      213: 7563381559581095643
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_37
+  - first:
+      213: 8778225545140260898
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_38
+  - first:
+      213: 8219512970697097353
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_39
+  - first:
+      213: 3224226089518628310
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_40
+  - first:
+      213: -5428704280860542067
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_41
+  - first:
+      213: 5602309835798014312
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_42
+  - first:
+      213: -4535435608684608188
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_43
+  - first:
+      213: 5843255661413910038
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_44
+  - first:
+      213: 5423691100171413130
+    second: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 111
+        width: 2182
+        height: 2382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbcccebf3851da2c0800000000000000
+      internalID: -4418852002769089349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_1
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 2365
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3ebfafaf92d8e00800000000000000
+      internalID: 1048540446176568292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_2
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 2390
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f545e488cd7e3cb0800000000000000
+      internalID: -4882326645846489609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_3
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 2397
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a526ee4f4ebf53f40800000000000000
+      internalID: 5707745063542350426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_4
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 2308
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a65b11040a19ba00800000000000000
+      internalID: 772677415571510945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_5
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 2345
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5535073e22cd07c10800000000000000
+      internalID: 2049379872856363861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_6
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 2247
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4363499276f433ae0800000000000000
+      internalID: -1570824540524366284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_7
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 2278
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d8b2b1b7da54d30800000000000000
+      internalID: 4415125753955061111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_8
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 1914
+        width: 255
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864cd6f300576bd90800000000000000
+      internalID: -7082344720068918168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_9
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 1969
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76afeeedb5a4636b0800000000000000
+      internalID: -5316980551621608857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_10
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 1764
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6397ec14eb9f1e360800000000000000
+      internalID: 7197308275057916214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_11
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1789
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48787dbfb9bca9b0800000000000000
+      internalID: -5067471247529969588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_12
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 1796
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a76dab839df0ce0800000000000000
+      internalID: -1436690918431884714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_13
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 1707
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460aedfae4a924f90800000000000000
+      internalID: -6970839610467377052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_14
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 1744
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d22a781ee6c0da80800000000000000
+      internalID: -8444030575404506412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_15
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1646
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4372727f9c0382610800000000000000
+      internalID: 1596579711895938868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_16
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 1677
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed4f9109a095b130800000000000000
+      internalID: 3581928134194187758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_17
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 1313
+        width: 255
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a398ce5ea7ab22bf0800000000000000
+      internalID: -350512783975216838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_18
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 1368
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a595eb3f378b8a70800000000000000
+      internalID: 8830300200047580583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_19
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 1163
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c62b2acff3414a0800000000000000
+      internalID: -6623598797661246378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_20
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1188
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b65aa16157a5660800000000000000
+      internalID: 7375336077569387390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_21
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 1195
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bca79ffa0f130d20800000000000000
+      internalID: 3243470288735153334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_22
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 1106
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a112371b927d9af20800000000000000
+      internalID: 3434512764917457178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_23
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 1143
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6969bb2c9d7ddbf0800000000000000
+      internalID: -297943890634643092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_24
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1045
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cceb46d58459fb0800000000000000
+      internalID: -4641724274976043953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_25
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 1076
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82bc3e385e6f4cd0800000000000000
+      internalID: -2571715536924921202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_26
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 712
+        width: 255
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebdf51cc8c8e30960800000000000000
+      internalID: 7567147748027661758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_27
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 767
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7dd7f105f79bb50800000000000000
+      internalID: 6609453910245365753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_28
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 562
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111566fbacb669470800000000000000
+      internalID: 8401020673444958481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_29
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 587
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c411b56a292b6ed0800000000000000
+      internalID: -2419795112710040380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_30
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 594
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e8c4eaca848b460800000000000000
+      internalID: 7257630706003381919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_31
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 505
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90cf69c86bffcf70800000000000000
+      internalID: 9209856190470668444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_32
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 542
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2887ff50e0a6cf70800000000000000
+      internalID: 9207223373748733994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_33
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 444
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2091d07a093491010800000000000000
+      internalID: 1160032667581618434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_34
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 475
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180dcc55d7824f1c0800000000000000
+      internalID: -4470904011296550783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_35
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 111
+        width: 255
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4721c6932edabe7f0800000000000000
+      internalID: -582180539676749196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_36
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 166
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0671ac6dc31aaf760800000000000000
+      internalID: 7492478212757919584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_37
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd63297b47786f860800000000000000
+      internalID: 7563381559581095643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_38
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 0
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2205850df9582d970800000000000000
+      internalID: 8778225545140260898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_39
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 0
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980cd1d7f73911270800000000000000
+      internalID: 8219512970697097353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_40
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 0
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddfd45bb80cebc20800000000000000
+      internalID: 3224226089518628310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_41
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 0
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b3aa4183e59a4b0800000000000000
+      internalID: -5428704280860542067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_42
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 0
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869ea640d176fbd40800000000000000
+      internalID: 5602309835798014312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_43
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 0
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44542baf755ee01c0800000000000000
+      internalID: -4535435608684608188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_44
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 0
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616cd5ea01a671150800000000000000
+      internalID: 5843255661413910038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_45
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 0
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a862a25d152d44b40800000000000000
+      internalID: 5423691100171413130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_0: -4418852002769089349
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_1: 1048540446176568292
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_10: 7197308275057916214
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_11: -5067471247529969588
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_12: -1436690918431884714
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_13: -6970839610467377052
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_14: -8444030575404506412
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_15: 1596579711895938868
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_16: 3581928134194187758
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_17: -350512783975216838
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_18: 8830300200047580583
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_19: -6623598797661246378
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_2: -4882326645846489609
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_20: 7375336077569387390
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_21: 3243470288735153334
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_22: 3434512764917457178
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_23: -297943890634643092
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_24: -4641724274976043953
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_25: -2571715536924921202
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_26: 7567147748027661758
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_27: 6609453910245365753
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_28: 8401020673444958481
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_29: -2419795112710040380
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_3: 5707745063542350426
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_30: 7257630706003381919
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_31: 9209856190470668444
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_32: 9207223373748733994
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_33: 1160032667581618434
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_34: -4470904011296550783
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_35: -582180539676749196
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_36: 7492478212757919584
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_37: 7563381559581095643
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_38: 8778225545140260898
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_39: 8219512970697097353
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_4: 772677415571510945
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_40: 3224226089518628310
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_41: -5428704280860542067
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_42: 5602309835798014312
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_43: -4535435608684608188
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_44: 5843255661413910038
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_45: 5423691100171413130
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_5: 2049379872856363861
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_6: -1570824540524366284
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_7: 4415125753955061111
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_8: -7082344720068918168
+      pngtree-pixel-art-cute-boxer-rooster-character-png-image_15542220_9: -5316980551621608857
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
