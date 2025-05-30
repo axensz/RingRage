@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro; // Necesario para TextMeshPro
+using UnityEngine.SceneManagement;
 
 public class GameResultManager : MonoBehaviour
 {
@@ -94,20 +95,24 @@ public class GameResultManager : MonoBehaviour
     {
         if (gameEnded) return;
         gameEnded = true;
-
         Debug.Log("Player Died - Result: Has Perdido");
         ShowResult("Has Perdido");
+        ScoreManager.SaveScore();
+        ScoreManager.LockScore();
+        // ScoreManager.ResetScore();
+        // ScoreManager.UnlockScore();
     }
 
     void HandleEnemyDeath()
     {
         if (gameEnded) return;
-        
-        // Aquí podrías añadir lógica para verificar si todos los enemigos han muerto si tienes más de uno.
-        // Por ahora, asumimos que la muerte de este 'enemyHealth' significa que el jugador ha ganado.
         gameEnded = true; 
         Debug.Log("Enemy Died - Result: Has Ganado");
         ShowResult("Has Ganado");
+        ScoreManager.SaveScore();
+        ScoreManager.LockScore();
+        // ScoreManager.ResetScore();
+        // ScoreManager.UnlockScore();
     }
 
     void ShowResult(string message)

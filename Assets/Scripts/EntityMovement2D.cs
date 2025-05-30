@@ -25,6 +25,9 @@ public class EntityMovement2D : MonoBehaviour
     public float maxStamina = 100f; // Para que StaminaBar.cs pueda leerlo
     [HideInInspector] public float currentStamina; // Para que StaminaBar.cs pueda leerlo, oculto del inspector
 
+    [Header("Dash Walls")]
+    [SerializeField] LayerMask wallLayer; // Asigna la capa de muros en el inspector
+
     /* ─── Runtime ─── */
     Rigidbody2D rb;
     SpriteRenderer sr;
@@ -140,19 +143,29 @@ public class EntityMovement2D : MonoBehaviour
 
     void StartDash()
     {
-        // Debug.Log($\"{gameObject.name} - StartDash called.\"); // DEBUG
+        // Detectar si hay muro en la dirección del dash
+        float dir = sr.flipX ? -1f : 1f;
+        Vector2 dashOrigin = transform.position;
+        float dashDistance = dashForce * dashDuration * 1.1f; // Ajusta el factor si es necesario
+        RaycastHit2D hit = Physics2D.Raycast(dashOrigin, Vector2.right * dir, dashDistance, wallLayer);
+        if (hit.collider != null)
+        {
+            // Hay un muro, ajusta la distancia máxima del dash
+            float allowedDistance = hit.distance - 0.1f; // Deja un pequeño margen
+            rb.linearVelocity = new Vector2(dir * (allowedDistance / dashDuration), 0f);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(dir * dashForce, 0f);
+        }
         isDashing = true;
         dashTimer = 0f;
-        nextDashTime = Time.time + dashCooldown; // Marcar cuándo termina el cooldown
-        currentStamina = 0f; // Consumir toda la stamina
-
+        nextDashTime = Time.time + dashCooldown;
+        currentStamina = 0f;
         anim.SetTrigger("Dash");
         if (dashTrail) dashTrail.emitting = true;
         if (col) col.enabled = false; // Permite atravesar enemigos
-        // Aplica impulso en la dirección actual
-        float dir = sr.flipX ? -1f : 1f;
-        rb.linearVelocity = new Vector2(dir * dashForce, 0f);
-        // Debug.Log($\"{gameObject.name} - StartDash: Set velocity to ({dir * dashForce}, 0). isDashing = {isDashing}\"); // DEBUG
+        // Debug.Log($"{gameObject.name} - StartDash: Set velocity to ({rb.linearVelocity.x}, 0). isDashing = {isDashing}");
     }
 
     void EndDash()
