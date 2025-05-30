@@ -17,23 +17,25 @@ public class Health : MonoBehaviour
     public float CurrentHP => currentHP;
     Animator anim;
     EntityMovement2D move;
-    private bool isDead = false; // <-- AÑADIDO
 
     void Awake()
     {
         currentHP = maxHP;
         anim = GetComponent<Animator>();
         move = GetComponent<EntityMovement2D>();
+        // Debug.Log($"{gameObject.name} - Awake: Initial HP = {currentHP}/{maxHP}"); // DEBUG
     }
 
     public bool TakeDamage(float dmg)
     {
-        if (isDead) return false; // <-- AÑADIDO: No tomar daño si ya está muerto
+        if (currentHP <= 0) return true; // Ya está muerto, no procesar más daño
 
+        // float originalDmg = dmg; // DEBUG
         /* Si estamos bloqueando, reducimos o anulamos daño */
         if (move != null && move.IsBlocking) dmg *= 0.3f;
 
         currentHP -= dmg;
+        // Debug.Log($"{gameObject.name} - TakeDamage: Damage taken = {dmg} (original: {originalDmg}), Current HP = {currentHP}"); // DEBUG
 
         // Solo actualiza el texto si currentVida está asignado
         if (currentVida != null) 
@@ -47,19 +49,14 @@ public class Health : MonoBehaviour
         // Si no hay Combat2D, fallback a animación directa
         else if (anim != null) anim.SetTrigger("Hit");
 
-        if (currentHP <= 0 && !isDead) // <-- MODIFICADO: asegurar que no esté ya muerto
-        {
-            Die();
-        }
+        if (currentHP <= 0) Die();
         return currentHP <= 0;
     }
 
     void Die()
     {
-        if (isDead) return; // <-- AÑADIDO: Salir si ya se llamó a Die()
-        isDead = true; // <-- AÑADIDO: Marcar como muerto primero
-
-        if (anim != null) anim.SetTrigger("Death"); // <-- Añadido null check por si acaso
+        // Debug.Log($"{gameObject.name} - Die: HP is {currentHP}. Character is dying."); // DEBUG
+        anim.SetTrigger("Death");
         OnDeath?.Invoke();
         /* Desactivar colisiones y scripts de movimiento/combat */
         foreach (var c in GetComponents<MonoBehaviour>()) c.enabled = false;

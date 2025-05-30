@@ -32,48 +32,28 @@ public class EscenasManager : MonoBehaviour
 
     public void ShowGameModesPanel() // Changed from MostrarModosDeJuego
     {
-        if (panelMenu != null)
-        {
-            panelMenu.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("panelMenu is not assigned in EscenasManager.");
-        }
+        panelMenu.SetActive(false);
+        panelModosDeJuego.SetActive(true);
 
-        if (panelModosDeJuego != null)
-        {
-            panelModosDeJuego.SetActive(true);
-        }
-        else
-        {
-            Debug.LogError("panelModosDeJuego is not assigned in EscenasManager. Please assign it in the Inspector.");
-        }
     }
 
     public void GameModesPanelToMenu() // Changed from ModosDeJuegoToMenu
     {
-        if (panelModosDeJuego != null)
-        {
-            panelModosDeJuego.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("panelModosDeJuego is not assigned in EscenasManager. Please assign it in the Inspector.");
-        }
-
-        if (panelMenu != null)
-        {
-            panelMenu.SetActive(true);
-        }
-        else
-        {
-            Debug.LogWarning("panelMenu is not assigned in EscenasManager.");
-        }
+        panelModosDeJuego.SetActive(false);
+        panelMenu.SetActive(true);
     }
 
     public void ReturnToMainMenu() // Changed from GameToMenu
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    /// <summary>
+    /// Reinicia la escena actual. Ideal para un botón de "Retry".
+    /// </summary>
+    public void RetryGame()
+    {
+        // Recarga la escena que está actualmente activa
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

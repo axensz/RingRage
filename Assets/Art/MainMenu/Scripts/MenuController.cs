@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -65,7 +65,6 @@ public class MenuController : MonoBehaviour {
     public AudioClip Select;
     public AudioClip SceneSelect;
     private AudioSource Audio;
-    private Animation backgroundLegacyAnimation; // Added for caching
 
     //Events
     [SerializeField, HideInInspector]
@@ -87,15 +86,6 @@ public class MenuController : MonoBehaviour {
         //Set the activeBackground array length
         if (useParallax) { activeBackground = new GameObject[backgroundsParallax.Length]; } else { activeBackground = new GameObject[backgrounds.Length]; }
         initiate();      
-
-        if (backgroundsController != null)
-        {
-            backgroundLegacyAnimation = backgroundsController.GetComponent<Animation>();
-        }
-        else
-        {
-            Debug.LogWarning("backgroundsController is not assigned in MenuController. Please assign it in the Inspector.");
-        }
     }
 
 	void Update () {
@@ -146,34 +136,13 @@ public class MenuController : MonoBehaviour {
         }
 
         //Check is the scenes are animating and puts the variable in true or false
-        if (backgroundLegacyAnimation != null)
+        var anim = backgroundsController.GetComponent<Animation>();
+        if (anim.isPlaying)
         {
-            if (backgroundLegacyAnimation.isPlaying)
-            {
-                isAnimating = true;
-            }
-            else
-            {
-                isAnimating = false;
-            }
-        }
-        else if (backgroundsController != null && backgroundLegacyAnimation == null)
+            isAnimating = true;
+        }else
         {
-            // Attempt to re-fetch if it was null but controller exists (e.g. controller was instantiated late)
-            // This is a fallback, ideally it's assigned in Start
-            backgroundLegacyAnimation = backgroundsController.GetComponent<Animation>();
-            if (backgroundLegacyAnimation != null && backgroundLegacyAnimation.isPlaying)
-            {
-                 isAnimating = true;
-            }
-            else
-            {
-                isAnimating = false;
-            }
-        }
-        else
-        {
-            isAnimating = false; // Default if no controller or animation
+            isAnimating = false;
         }
 
 
