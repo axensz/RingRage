@@ -23,19 +23,19 @@ public class Health : MonoBehaviour
         currentHP = maxHP;
         anim = GetComponent<Animator>();
         move = GetComponent<EntityMovement2D>();
-        // Debug.Log($"{gameObject.name} - Awake: Initial HP = {currentHP}/{maxHP}"); // DEBUG
+
     }
 
     public bool TakeDamage(float dmg)
     {
         if (currentHP <= 0) return true; // Ya está muerto, no procesar más daño
 
-        // float originalDmg = dmg; // DEBUG
         /* Si estamos bloqueando, reducimos o anulamos daño */
         if (move != null && move.IsBlocking) dmg *= 0.3f;
 
+        float hpBeforeDamage = currentHP; // DEBUG
         currentHP -= dmg;
-        // Debug.Log($"{gameObject.name} - TakeDamage: Damage taken = {dmg} (original: {originalDmg}), Current HP = {currentHP}"); // DEBUG
+        Debug.Log($"{gameObject.name} - TakeDamage: HP was {hpBeforeDamage}, damage taken = {dmg}, current HP now = {currentHP}"); // DEBUG
 
         // Solo actualiza el texto si currentVida está asignado
         if (currentVida != null) 
@@ -55,7 +55,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        // Debug.Log($"{gameObject.name} - Die: HP is {currentHP}. Character is dying."); // DEBUG
+        Debug.Log($"{gameObject.name} - Die: HP is {currentHP}. Character is dying. Calling OnDeath.Destroying in 2s."); // DEBUG
         anim.SetTrigger("Death");
         OnDeath?.Invoke();
         /* Desactivar colisiones y scripts de movimiento/combat */

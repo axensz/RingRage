@@ -53,8 +53,8 @@ public class EntityMovement2D : MonoBehaviour
         SpriteRenderer = sr;
         if (dashTrail) dashTrail.emitting = false;
         currentStamina = maxStamina; // Iniciar con stamina llena
-        // Debug.Log($"{gameObject.name} - EntityMovement2D Awake: moveSpeed = {moveSpeed}, Rigidbody2D is {(rb != null ? "found" : "NOT FOUND")}"); // DEBUG
-        // if (rb != null) Debug.Log($"{gameObject.name} - EntityMovement2D Awake: Rigidbody BodyType = {rb.bodyType}"); // DEBUG
+        // Debug.Log($\"{gameObject.name} - EntityMovement2D Awake: moveSpeed = {moveSpeed}, Rigidbody2D is {(rb != null ? \"found\" : \"NOT FOUND\")}\"); // DEBUG
+        // if (rb != null) Debug.Log($\"{gameObject.name} - EntityMovement2D Awake: Rigidbody BodyType = {rb.bodyType}\"); // DEBUG
     }
 
     void Update()
@@ -71,11 +71,11 @@ public class EntityMovement2D : MonoBehaviour
         if (!isDashing)
         {
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-            // Debug.Log($"{gameObject.name} - EntityMovement2D FixedUpdate: moveInput.x = {moveInput.x}, moveSpeed = {moveSpeed}, Calculated X Velocity = {moveInput.x * moveSpeed}, Current Y Velocity = {rb.linearVelocity.y}"); // DEBUG
+            // Debug.Log($\"{gameObject.name} - EntityMovement2D FixedUpdate: moveInput.x = {moveInput.x}, moveSpeed = {moveSpeed}, Calculated X Velocity = {moveInput.x * moveSpeed}, Current Y Velocity = {rb.linearVelocity.y}\"); // DEBUG
         }
         // else // DEBUG
         // { // DEBUG
-            // Debug.Log($"{gameObject.name} - EntityMovement2D FixedUpdate: Currently Dashing, X Velocity = {rb.linearVelocity.x}"); // DEBUG
+            // Debug.Log($\"{gameObject.name} - EntityMovement2D FixedUpdate: Currently Dashing, X Velocity = {rb.linearVelocity.x}\"); // DEBUG
         // } // DEBUG
     }
 
@@ -101,7 +101,7 @@ public class EntityMovement2D : MonoBehaviour
         if (isDashing)
         {
             dashTimer += Time.deltaTime;
-            // Debug.Log($"{gameObject.name} - HandleDash: isDashing = true, dashTimer = {dashTimer}"); // DEBUG - Puede ser muy verboso
+            // Debug.Log($\"{gameObject.name} - HandleDash: isDashing = true, dashTimer = {dashTimer}\"); // DEBUG - Puede ser muy verboso
             if (dashTimer >= dashDuration)
             {
                 EndDash();
@@ -113,7 +113,7 @@ public class EntityMovement2D : MonoBehaviour
     public void OnMove(InputValue v)
     {
         moveInput = v.Get<Vector2>();
-        // Debug.Log($"{gameObject.name} - EntityMovement2D OnMove: moveInput = {moveInput}"); // DEBUG
+        // Debug.Log($\"{gameObject.name} - EntityMovement2D OnMove: moveInput = {moveInput}\"); // DEBUG
     }
 
     public void OnJump(InputValue v)
@@ -129,7 +129,7 @@ public class EntityMovement2D : MonoBehaviour
 
     public void OnDash(InputValue v)
     {
-        Debug.Log($"{gameObject.name} - OnDash called. isPressed: {v.isPressed}, isDashing: {isDashing}, Time.time: {Time.time}, nextDashTime: {nextDashTime}, IsBlocking: {IsBlocking}, currentStamina: {currentStamina}"); // DEBUG
+        // Debug.Log($\"{gameObject.name} - OnDash called. isPressed: {v.isPressed}, isDashing: {isDashing}, Time.time: {Time.time}, nextDashTime: {nextDashTime}, IsBlocking: {IsBlocking}, currentStamina: {currentStamina}\"); // DEBUG
         // Ahora también verificamos si tenemos suficiente stamina (prácticamente llena)
         // y si el cooldown ha pasado (Time.time >= nextDashTime)
         if (v.isPressed && !isDashing && Time.time >= nextDashTime && !IsBlocking && currentStamina >= maxStamina * 0.99f) // Usamos 99% para evitar problemas de flotantes
@@ -140,7 +140,7 @@ public class EntityMovement2D : MonoBehaviour
 
     void StartDash()
     {
-        Debug.Log($"{gameObject.name} - StartDash called."); // DEBUG
+        // Debug.Log($\"{gameObject.name} - StartDash called.\"); // DEBUG
         isDashing = true;
         dashTimer = 0f;
         nextDashTime = Time.time + dashCooldown; // Marcar cuándo termina el cooldown
@@ -152,12 +152,12 @@ public class EntityMovement2D : MonoBehaviour
         // Aplica impulso en la dirección actual
         float dir = sr.flipX ? -1f : 1f;
         rb.linearVelocity = new Vector2(dir * dashForce, 0f);
-        Debug.Log($"{gameObject.name} - StartDash: Set velocity to ({dir * dashForce}, 0). isDashing = {isDashing}"); // DEBUG
+        // Debug.Log($\"{gameObject.name} - StartDash: Set velocity to ({dir * dashForce}, 0). isDashing = {isDashing}\"); // DEBUG
     }
 
     void EndDash()
     {
-        Debug.Log($"{gameObject.name} - EndDash called."); // DEBUG
+        // Debug.Log($\"{gameObject.name} - EndDash called.\"); // DEBUG
         isDashing = false;
         if (dashTrail) dashTrail.emitting = false;
         if (col) col.enabled = true;
